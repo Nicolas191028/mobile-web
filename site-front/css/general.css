@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(235, 223, 223);
+}
+
+.container {
+    background: #fff;
+}
