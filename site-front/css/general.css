@@ -4,9 +4,33 @@
 }
 
 body {
-    background: rgb(235, 223, 223);
+    background: #141fb8;
 }
 
 .container {
     background: #fff;
+    max-width: 1064px;
+    margin: 0 auto;
+} 
+
+/* Criando o Header */
+header {
+    background: #72fe85;
+    /* Altura */
+    height: 130px;
+    border-bottom: 3px solid #29ecf3;
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+header h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
 }
