@@ -15,12 +15,17 @@ body {
     margin: 0 auto;
 } 
 
+.titleGeneral h1 {
+    padding-left: 25px;
+    color: #72fe85;
+}
+
 /* Criando o Header */
 header {
     background: #72fe85;
     /* Altura */
     height: 130px;
-    border-bottom: 3px solid #AFEEEE;
+    border-bottom: 3px solid #8effe6;
     /* Flexbox */
     display: flex;
     align-items: center;
@@ -111,5 +116,22 @@ header h2 {
 
 .box a:hover {
     text-decoration: underline;
+}
+
+.promocao {
+    
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+}
+
+.promocao img {
+    max-width: 800px;
+    height: 180px;
+    border: 2px solid #a146ec;
+    border-radius: 10px;
+    margin: 20px;
+    /* Cortar imagem */
+    overflow: hidden;
 }
 
