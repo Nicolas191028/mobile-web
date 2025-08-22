@@ -1,4 +1,4 @@
-* {
+ * {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
 } 
 
-.titleGeneral h1,h2,h3 {
+.titleGeneral h1,h2,h3,h4 {
     padding-left: 25px;
     color: #72fe85;
 }
@@ -203,7 +203,7 @@ footer p {
     margin: 20px 0 20px 0;
 }
 
-.contentSobre h1,h2,h3 {
+.contentSobre h1,h2,h3,h4 {
     text-align: center;
 }
 
@@ -212,7 +212,25 @@ section p {
     color: #6a46ec;
 }
 
-section strong {
+.strong {
     text-align: center;
     color: #6a46ec;
+}
+
+.containerLista {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.containerLista details {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+} 
+
+.containerLista article {
+    margin-top: 8px;
+    color: #0099ff;
 }
