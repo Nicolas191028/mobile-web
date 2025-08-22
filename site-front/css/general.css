@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    list-style: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,7 +14,12 @@ body {
     margin: 0 auto;
 } 
 
-.titleGeneral h1 {
+.titleGeneral h1,h2,h3 {
+    padding-left: 25px;
+    color: #72fe85;
+}
+
+.contentSobre {
     padding-left: 25px;
     color: #72fe85;
 }
@@ -44,6 +48,7 @@ header h2 {
 
 /* MENU DO SITE */
 .menu {
+    list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -71,7 +76,7 @@ header h2 {
 .banner {
     max-width: 1000px;
     height: 250px;
-    border: 2px solid #a146ec;
+    border: 2px solid #6a46ec;
     border-radius: 10px;
     margin: 20px;
     /* Cortar imagem */
@@ -86,7 +91,7 @@ header h2 {
 }
 
 .box {
-    border: 1px solid #a146ec;
+    border: 1px solid #6a46ec;
     max-width: 300px;
     border-radius: 10px;
     /* Cortar imagem */
@@ -97,7 +102,7 @@ header h2 {
 }
 
 .box img {
-    border-bottom: 1px solid #a146ec;
+    border-bottom: 1px solid #6a46ec;
 } 
 
 .box p {
@@ -128,7 +133,7 @@ header h2 {
 .promocao img {
     max-width: 800px;
     height: 180px;
-    border: 2px solid #a146ec;
+    border: 2px solid #6a46ec;
     border-radius: 10px;
     margin: 20px;
     /* Cortar imagem */
@@ -198,6 +203,16 @@ footer p {
     margin: 20px 0 20px 0;
 }
 
-.contentSobre h1 {
+.contentSobre h1,h2,h3 {
     text-align: center;
+}
+
+section p {
+    text-align: center;
+    color: #6a46ec;
+}
+
+section strong {
+    text-align: center;
+    color: #6a46ec;
 }
