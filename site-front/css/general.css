@@ -101,6 +101,23 @@ header h2 {
     box-shadow: 2px 3px 3px #bcbaba;
 }
 
+.content-masc {
+     margin: 20px;
+    /* Flexbox */
+    display: flex;
+}
+
+.masc {
+    border: 1px solid #6a46ec;
+    max-width: 300px;
+    border-radius: 10px;
+    /* Cortar imagem */
+    overflow: hidden;
+    margin: 10px 35px 20px 15px;
+    /* Sombra */
+    box-shadow: 2px 3px 3px #bcbaba;
+}
+
 .box img {
     border-bottom: 1px solid #6a46ec;
 } 
