@@ -102,20 +102,20 @@ header h2 {
 }
 
 .content-masc {
-     margin: 20px;
+    margin: 20px;
     /* Flexbox */
     display: flex;
 }
 
 .masc {
     border: 1px solid #6a46ec;
-    max-width: 300px;
     border-radius: 10px;
     /* Cortar imagem */
     overflow: hidden;
-    margin: 10px 35px 20px 15px;
+    margin: 10px 35px 20px 390px;
     /* Sombra */
     box-shadow: 2px 3px 3px #bcbaba;
+    text-align: center;
 }
 
 .box img {
@@ -216,7 +216,7 @@ footer p {
 }
 
 /* Página Sobre */
-.spaceSobre {
+.spaceSobre, .spaceContato {
     margin: 20px 0 20px 0;
 }
 
@@ -250,4 +250,17 @@ section p {
 .containerLista article {
     margin-top: 8px;
     color: #0099ff;
+}
+
+/* Página contato */
+    
+.text-contato {
+    color: #000;
+    margin: 0 0 20px 20px;
+    font-size: 42px;
+}
+
+.text-contato strong {
+    color: #525bd1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
