@@ -101,13 +101,13 @@ header h2 {
     box-shadow: 2px 3px 3px #bcbaba;
 }
 
-.content-masc {
+.content-masco {
     margin: 20px;
     /* Flexbox */
     display: flex;
 }
 
-.masc {
+.masco {
     border: 1px solid #6a46ec;
     border-radius: 10px;
     /* Cortar imagem */
@@ -263,4 +263,42 @@ section p {
 .text-contato strong {
     color: #525bd1;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    margin: 20px;
+}
+
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group select {
+    height: 30px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    border: 1px solid #bcbaba;
+    outline: none;
+    padding-left: 5px; 
+    border-radius: 7px;
+}
+
+.form-group-sexo label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
