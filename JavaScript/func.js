@@ -1,15 +1,13 @@
-function mostrarNome(nome) {
-    document.write(nome);
+function mostrarNome(nome , idade) {
+    document.write(nome , idade);
 }
 
 function pularLinha() {
     document.write("<br><br>");
 }
 
-
 // chamar função
 pularLinha();
-mostrarNome("Jorge");
+mostrarNome("Jorge ", 39);
 pularLinha();
-pularLinha();
-mostrarNome("Carlos");
+mostrarNome("Carlos ", 25);
