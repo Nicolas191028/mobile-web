@@ -31,16 +31,3 @@ function div(event) {
     num1.value = "";
     num2.value = "";
 }
-
-function toda(event) {
-    event.preventDefault();
-    resultado.innerHTML = Number(num1.value) + Number(num2.value);
-    document.write("<br>")
-    resultado.innerHTML = Number(num1.value) - Number(num2.value);
-    document.write("<br>")
-    resultado.innerHTML = Number(num1.value) * Number(num2.value);
-    document.write("<br>")
-    resultado.innerHTML = Number(num1.value) / Number(num2.value);
-    num1.value = "";
-    num2.value = "";
-}
