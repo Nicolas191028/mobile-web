@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #483D8B;
+    background: #0098a3;
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
     width: 100%;
     max-width:450px;
     /*Borda*/
-    border: 2px solid white;
+    border: 2px dotted #0aec03;
     /* Borda arrendondada */
     border-radius: 5px;
     /* Centralizar minha tela*/
@@ -45,7 +45,7 @@ body {
 
 #verifica-nota {
     /* Cor do fundo */
-    background: #191970;
+    background: #0aec03;
     /* Borda do Botão */
     border: 1px solid white;
     /*Cor de texto */
@@ -61,7 +61,7 @@ body {
 
 #verifica-nota:hover {
     background-color: rgb(232, 229, 229);
-    color: #191970;
+    color: #1100ad;
 }
 
 #result {
