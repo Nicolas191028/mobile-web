@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://t3.ftcdn.net/jpg/15/67/32/52/360_F_1567325232_ZOBlIRQweIa8agWStqvD3AtQKyfuQE91.jpg);
+    background-size: 1000px;
+}
+
+.container {
+    /*Largura*/
+    width: 100%;
+    max-width:600px;
+    /*Borda*/
+    border: 2px solid red;
+    /* Borda arrendondada */
+    border-radius: 5px;
+    /* Centralizar minha tela*/
+    margin: 300px auto;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+
+.container form {
+    /*Flexbox*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control input {
+    /*Espaçamento entre os elementos*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /*Efeito colateral do navegador*/
+    outline: none;
+    /*Espaçamento dentro do elemento*/
+    padding: 5px;
+}
+
+.form-control label {
+    /* Espaçamento entre os elementos */
+    margin-top: 15px;
+    color: #fff;
+    display: block;
+}
+
+#verifica-idade {
+    /* Cor do fundo */
+    background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+    /* Borda do Botão */
+    border: 1px solid white;
+    /*Cor de texto */
+    color: #fff;
+    /*Espaçamento dentro do elemento */
+    padding: 5px;
+    /* Espaçamento fora do elemento */
+    margin-bottom: 10px;
+    /* Cursor mãozinha */
+    cursor: pointer;
+    transition: all 0.9s;
+}
+
+#verifica-idade:hover {
+    background-color: rgb(232, 229, 229);
+    color: blue;
+}
+
+#result {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#message {
+    display: none;
+}
+
+#message span {
+    color: red;
+    padding-bottom: 10px;
+    display: block;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -4px 4px #ef3550,
+               -8px 8px #f48fb1,
+               -12px 12px #7e57c2,
+               -16px 16px #2196f3,
+               -20px 20px #26c6da,
+               -24px 24px #43a047,
+               -28px 28px #eeff41,
+               -32px 32px #f9a825,
+               -36px 36px #ff5722;
+
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    animation: spin-3d 4s infinite linear;
+}
+
+@keyframes spin-3d {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
