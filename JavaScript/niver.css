@@ -13,7 +13,7 @@ body {
     width: 100%;
     max-width:700px;
     /*Borda*/
-    border: 2px solid red;
+    border: 2px solid linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     /* Borda arrendondada */
     border-radius: 5px;
     /* Centralizar minha tela*/
@@ -77,9 +77,6 @@ body {
     }
 }
 
-.img {
-    margin-left: 70px;
-}
 
 .rod {
     font-family: Comic Sans MS;
@@ -87,7 +84,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
-    text-shadow: 
+    text-shadow:
         1px 1px 0px #e63946, 
         2px 2px 0px #f77f00, 
         3px 3px 0px #fcbf49, 
@@ -194,3 +191,64 @@ h3 {
   --color-quaternary: #90BAF5;
   --color-quinary: #A2C4F5;
 */
+
+.content-box {
+    margin: 20px;
+    /* Flexbox */
+    display: flex;
+}
+
+.box {
+    border: 1px solid #6a46ec;
+    max-width: 300px;
+    border-radius: 10px;
+    /* Cortar imagem */
+    overflow: hidden;
+    margin: 10px 35px 20px 15px;
+    /* Sombra */
+    box-shadow: 2px 3px 3px #bcbaba;
+}
+
+img {
+  width: 185px;
+  max-width: 185%;
+  height: auto;
+}
+
+.wave-text span,h2 {
+    display: inline-block;
+    font-size: 4rem;
+    font-family: Comic Sans MS;
+    animation: wave 2s ease-in-out infinite;
+    .rainbow-letters {
+  font-size: 40px;
+  font-family: Comic Sans MS;
+}
+
+span:nth-child(10n + 1) {
+  color: #ff0400;
+}
+
+}
+
+.wave-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+.wave-text h2:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.wave-text h2:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
