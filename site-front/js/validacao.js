@@ -8,10 +8,23 @@ form.addEventListener("submit", function(event) {
 
     // Condição de validação
     if (email === "") {
-        alert("Digite um e-mail valido")
+        form.innerHTML = "Digite um e-mail valido";
+        novidades.style.display = "block";
         return false;
     }
 
+    novidades.style.display = "none";
+
+    // Validação simples: tem @ e .
+    if (!email.includes("@") || !email.includes(".")) {
+        form.innerHTML = "Email inválido ou incompleto tente novmente";
+        novidades.style.display = "block";
+        return;
+    } 
+
+    novidades.style.display = "none";
+    
+    form.innerHTML = "Email cadastrado com sucesso! ✅";
 
     // Limpa o campo
     form.reset();
