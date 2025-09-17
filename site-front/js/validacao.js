@@ -1,4 +1,5 @@
 const form = document.getElementById("newForm");
+const valid = document.getElementById("valid");
 
 form.addEventListener("submit", function(event) {
     // Impede envio automático
@@ -8,23 +9,17 @@ form.addEventListener("submit", function(event) {
 
     // Condição de validação
     if (email === "") {
-        form.innerHTML = "Digite um e-mail valido";
-        novidades.style.display = "block";
+        valid1.innerHTML = "Digite um e-mail valido";
         return false;
     }
 
-    novidades.style.display = "none";
-
     // Validação simples: tem @ e .
     if (!email.includes("@") || !email.includes(".")) {
-        form.innerHTML = "Email inválido ou incompleto tente novmente";
-        novidades.style.display = "block";
-        return;
+        valid2.innerHTML = "Email inválido, tente novamente";
+        return false;
     } 
 
-    novidades.style.display = "none";
-    
-    form.innerHTML = "Email cadastrado com sucesso! ✅";
+    valid3.innerHTML = "Email cadastrado com sucesso! ✅";
 
     // Limpa o campo
     form.reset();

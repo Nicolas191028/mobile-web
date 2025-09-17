@@ -351,3 +351,21 @@ legend {
     border: 0;
     cursor: pointer;
 }
+
+#valid1 {
+    font-size: 25px;
+    padding: 0px 0px 0px 50px;
+    color: rgb(117, 117, 117);
+}
+
+#valid2 {
+    font-size: 25px;
+    color: rgb(117, 0, 0);
+    display: flex;
+}
+
+#valid3 {
+    font-size: 25px;
+    color: rgb(0, 117, 0);
+    display: flex;
+}
