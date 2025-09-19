@@ -1,0 +1,28 @@
+body {
+    background: #6495ed;
+}
+
+.container {
+    border: 1px solid red;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    background: blue;
+    color: rgb(188, 224, 255);
+}
+
+h2 {
+    color: darkturquoise;
+}
+
+button {
+    background: cadetblue;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 10px;
+}
