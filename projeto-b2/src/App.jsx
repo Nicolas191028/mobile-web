@@ -24,18 +24,21 @@ const handleClick = () => {
       caption="Uma imagem interresante"  
       imagem={img1}
       texto = "Lorem Ipsum Popeto"
+      link = "https://www.irmaospiologo.com.br/"
        />
 
       <ImgCard 
       caption="PoPeTo" 
       imagem={img2}
       texto = "Popeto New"
+      link = "https://www.terra.com.br/"
        />
 
       <ImgCard 
       caption="Caio do Futebol" 
       imagem={img3}
       texto = "Popeto Popeto LDU"
+      link = "https://kahoot.it/"
        />
 
       <Button text="Clique aqui" onclick={handleClick}/>      
