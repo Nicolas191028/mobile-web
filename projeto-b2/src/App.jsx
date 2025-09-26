@@ -35,7 +35,7 @@ const handleClick = () => {
       <ImgCard 
       caption="Caio do Futebol" 
       imagem={img3}
-      texto = "Popeto Popeto Bangu"
+      texto = "Popeto Popeto LDU"
        />
 
       <Button text="Clique aqui" onclick={handleClick}/>      
