@@ -1,32 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
+import Prime from "./src/Telas/Prime"
 
 export default function App() {
   return (
     <>    
-      <View style={estilos.topo}>
-        <Text style={estilos.tituloHeader}>Popeto popeto popeto</Text>
-      </View>
-
       <View>
-        <Text>Popeto</Text>
+        <Prime />
       </View>
       </>
-
   );
 }
 
-const estilos = StyleSheet.create({
-  topo: {
-    width: "100%",
-    heigth: 150,
-    backgroundColor: "blue",
-  },
-  tituloHeader: {
-    width: "100%",
-    color: "white",
-    textAlign: "center",
-    paddingTop: 60,
-    fontSize: 20
-  }
 
-});
