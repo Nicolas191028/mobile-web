@@ -1,5 +1,6 @@
 import {View, StyleSheet, Text } from "react-native";
 import ListaCursos from "../Components/ListaCursos"
+import ListaAlunos from "../Components/ListaAlunos"
 
 export default function Prime() {
   return (
@@ -9,6 +10,8 @@ export default function Prime() {
       </View>
       
       <View style={estilos.cursosContent}>
+        <Text style={estilos.cursos}>Cursos Livres:</Text>
+        <Text> </Text>
         <Text style={estilos.itens}> - Programação em PHP</Text>
         <Text style={estilos.itens}> - Informática Básica</Text>
         <Text style={estilos.itens}> - Programação em JavaScript</Text>
@@ -19,8 +22,8 @@ export default function Prime() {
         <Text style={estilos.itens}> - Estilização em CSS</Text>
         <Text style={estilos.itens}> - Programação em Web-Mobile</Text>
       </View>
-
-    <ListaCursos></ListaCursos>
+      <ListaCursos></ListaCursos>
+      <ListaAlunos></ListaAlunos>
     </>
   )
 }
@@ -43,15 +46,35 @@ const estilos = StyleSheet.create({
     paddingTop: 25,
     width: "100%",
     heigth: 150,
-    backgroundColor: "#ffe0e0ff",
+    backgroundColor: "#000000ff",
   },
 
   itens: {
-    backgroundColor: "#770000ff",
+    backgroundColor: "#ff0000ff",
     fontSize: 15,
     textDecorationLine: "underline",
     textAlign: "center",
-    color: "#008cffff"
+    color: "#ffffffff",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 5,
+    padding: 10,
+    backgroundColor: "#00aeffff",
+    borderWidth: 2, 
+    borderRadius: 1,
+    borderColor: "#ffa9a9ff",
+    fontFamily: "Sans-Serif"
+  },
+
+  cursos: {
+    textAlign: "center",
+    fontSize: 25,
+    padding:20,
+    borderWidth: 1, 
+    borderRadius: 100,
+    borderColor: "#fff",
+    elevation: 3,
+    color: "#fff"
   },
 
 });
