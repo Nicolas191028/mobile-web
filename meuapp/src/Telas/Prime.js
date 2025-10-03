@@ -1,6 +1,7 @@
 import {View, StyleSheet, Text } from "react-native";
 import ListaCursos from "../Components/ListaCursos"
 import ListaAlunos from "../Components/ListaAlunos"
+import ListaPessoas from "../Components/ListaPessoas";
 
 export default function Prime() {
   return (
@@ -8,9 +9,11 @@ export default function Prime() {
       <View style={estilos.topo}>
         <Text style={estilos.tituloHeader}>Cursos SENAI</Text>
       </View>
+
+      <ListaPessoas/>
       
       <View style={estilos.cursosContent}>
-        <Text style={estilos.cursos}>Cursos Livres:</Text>
+        <Text style={estilos.cursos}>Cursos Livres🔓:</Text>
         <Text> </Text>
         <Text style={estilos.itens}> - Programação em PHP</Text>
         <Text style={estilos.itens}> - Informática Básica</Text>
@@ -22,8 +25,8 @@ export default function Prime() {
         <Text style={estilos.itens}> - Estilização em CSS</Text>
         <Text style={estilos.itens}> - Programação em Web-Mobile</Text>
       </View>
-      <ListaCursos></ListaCursos>
-      <ListaAlunos></ListaAlunos>
+      <ListaCursos/>
+      <ListaAlunos/>
     </>
   )
 }
@@ -63,7 +66,6 @@ const estilos = StyleSheet.create({
     borderWidth: 2, 
     borderRadius: 1,
     borderColor: "#ffa9a9ff",
-    fontFamily: "Sans-Serif"
   },
 
   cursos: {

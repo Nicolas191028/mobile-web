@@ -5,7 +5,7 @@ export default function listaCursos() {
 
   return (
     <View style={estilos.container}>
-        <Text style={estilos.cursos}>Cursos Esgotados:</Text>
+        <Text style={estilos.cursos}>Cursos Esgotados🔒:</Text>
         <Text> </Text>
         <FlatList 
             data={data}
