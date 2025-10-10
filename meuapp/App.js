@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import Prime from "./src/Telas/Prime"
+import Header from './src/Components/Header';
+import Card from './src/Components/Card';
 
 export default function App() {
   return (
     <>    
       <ScrollView>
-        <Prime />
+        <Header />
+        <Card />
       </ScrollView>
       </>
   );
 }
-
-
