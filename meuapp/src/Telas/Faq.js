@@ -1,10 +1,21 @@
 import React from 'react'
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+import Card from '../Components/Card';
 
 export default function Faq() {
+  const navigation = useNavigation();
 
   return (
-    <ScrollView style={estilos.container}>
+    <ScrollView style={estilos.container}> 
+
+        <Card
+          title="Home"
+          content="Retornar para Home."
+          textButton="Ir para Home"
+          onPress={ () => navigation.navigate("Home") }
+        />
+
         <Text style={estilos.title}>Faq - Se vira</Text>
         <Text></Text>
         <Text style={estilos.frequen}>Perguntas Frequentes ^</Text>
@@ -30,6 +41,8 @@ export default function Faq() {
           <Text style={estilos.pergunta}>É possível viver sem tecnologia hoje em dia? ^</Text>
           <Text  style={estilos.resposta}>É possível, mas muito difícil. A tecnologia está presente em quase tudo: transporte, comunicação, saúde, agricultura... Viver sem ela exigiria um retorno a um estilo de vida bem mais simples e isolado, algo que poucas pessoas estão preparadas para fazer.</Text>
         </View>
+        <Text style={estilos.hr}>--------------------------------------------------------------------------------------</Text>
+        <Text> </Text>
         <Text style={estilos.faca}>Faça sua pergunta:</Text>
     </ScrollView>
   )
@@ -47,53 +60,54 @@ const estilos = StyleSheet.create({
     title: {
       textAlign: 'center',
       fontSize: 50,
-      color: "red"
+      color: "red",
+      backgroundColor: "#ffa6a6ff"
     },
     containe: {
-      backgroundColor: "#ffffffff",
+      backgroundColor: "#fff897ff",
       borderRadius: 1.41,
       shadowColor: 'blue',
       shadowOpacity: 0.2,
       elevation: 2,
       padding: 20,
       margin: 20,
-      borderColor: "#ff7300ff",
+      borderColor: "#ffee00ff",
       borderWidth: 5,
       borderRadius: 10
     },
     frequen: {
       textAlign: 'center',
-      color: "yellow",
+      color: "#ff9100ff",
       fontSize: 25,
       width: "100%",
       height: 35,
       textAlign: 'center',
-      backgroundColor: "#ffffffff",
+      backgroundColor: "#ffc57aff",
       shadowColor: 'black',
       shadowOpacity: 0.2,
       elevation: 2,
     },
     pergunta: {
       width: "100%",
-      height: 35,
+      height: 45,
       textAlign: 'center',
-      backgroundColor: "#008cffff",
+      backgroundColor: "#8bff7bff",
       shadowColor: 'black',
       shadowOpacity: 0.2,
       elevation: 2,
-      borderColor: "#28bbffff",
+      borderColor: "#15ff00ff",
       borderWidth: 5,
       borderRadius: 5
     },
     resposta: {
       width: "100%",
-      height: 130,
+      height: 150,
       textAlign: 'center',
       backgroundColor: "#ffffffff",
       shadowColor: 'black',
       shadowOpacity: 0.2,
       elevation: 2,
-      borderColor: "#cacacaff",
+      borderColor: "#c5c5c5ff",
       borderWidth: 5,
       borderRadius: 10
     },
@@ -106,4 +120,7 @@ const estilos = StyleSheet.create({
       shadowOpacity: 0.2,
       elevation: 2,
     },
+    hr: {
+      color: "#ff0000ff"
+    }
 });
