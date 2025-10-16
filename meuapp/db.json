@@ -1,0 +1,26 @@
+{
+    "contatos": [
+        {
+            "id": "1",
+            "nome": "João Silva",
+            "telefone": "6767676767"
+        },
+        {
+            "id": "2",
+            "nome": "Popeto",
+            "telefone": "6666666666"
+        }
+    ],
+    "faq":[
+            {
+                "id": "1",
+                "pergunta": "O que é JSON Server",
+                "resposta": "JSON server é uma ferramenta que permite...."
+            },
+            {
+                "id": "2",
+                "pergunta": "Qual o nome de um organismo unicelular?",
+                "resposta": "A alga olho-de-marinheiro é a Valonia ventricosa, uma espécie de alga verde unicelular gigante encontrada em oceanos tropicais e subtropicais."
+            }
+]
+}
