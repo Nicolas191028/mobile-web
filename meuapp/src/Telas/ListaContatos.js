@@ -1,30 +1,67 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
+import { Text, ScrollView, View, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
+import Card from '../Components/Card';
 
 export default function ListaContatos() {
-    const [contatos,setContatos] = useState([]);
+  const [contatos, setContatos] = useState([]);
 
-    // Função para buscar contatos do servidor
-    const listaContatos = () => {
-        axios
-            .get("https://10.0.2.2:3000/contatos")
-            .then((resposta) => {
-                setContatos(resposta.data)
-            })
-            .catch((error) => {
-                console.error("Erro ao buscar contatos", error);
-            });
-    }
+  // Funçaõ para buscar contatos do servidor
+  const navigation = useNavigation();
+  const listaContatos = () => {
+    axios
+      .get("http://10.0.2.2:3000/contatos")
+      .then((resposta) => {
+        setContatos(resposta.data)
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar contatos", error);
+      });
+  }
 
-    // Use o useEffect para buscar dados
-    useEffect(() => {
-      listaContatos();
-    }, [])
+  // Use o useEffect para buscar dados
+  useEffect(() => {
+    listaContatos();
+  }, [])
 
-    return (
-        <View>
-            <Text>Lista Contatos</Text>
-        </View>
-    )
+  return (
+    <ScrollView style={estilos.container}>
+      <Card
+        title="Home"
+        content="Retornar para Home."
+        textButton="Ir para Home"
+        onPress={ () => navigation.navigate("Home") }
+      />
+
+      <Text style={estilos.titulo}>Lista Contatos</Text>
+      {contatos.length > 0 ? (
+        contatos.map((contato, index) => (
+          <View key={index}>
+            <Text>{contato.nome}</Text>
+            <Text>{contato.telefone}</Text>
+          </View>
+        ))
+        ) : (
+          <Text> Nenhum contato disponivel </Text>
+        )}
+    </ScrollView>
+  )
 }
+const estilos = StyleSheet.create ({
+  container: {
+    backgroundColor: "#ffffffff",
+    borderRadius: 1.41,
+    shadowColor: 'blue',
+    shadowOpacity: 0.2,
+    elevation: 2,
+    padding: 20,
+    margin: 20
+  },
+  titulo: {
+    textAlign: 'center',
+    fontSize: 50,
+    color: "red",
+    backgroundColor: "#ffa6a6ff"
+  }
+})

@@ -1,10 +1,27 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import Card from '../Components/Card';
+import axios from 'axios';
 
 export default function Faq() {
   const navigation = useNavigation();
+  const [faq, setFaq] = useState([]);
+
+  const listaFaq = () => {
+        axios
+             .get("http://10.0.2.2:3000/faq")
+            .then((resp) => {
+                setFaq(resp.data)
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar faq", error);
+            });
+    }
+
+    useEffect(() => {
+            listaFaq();
+        }, [])
 
   return (
     <ScrollView style={estilos.container}> 
@@ -41,6 +58,19 @@ export default function Faq() {
           <Text style={estilos.pergunta}>É possível viver sem tecnologia hoje em dia? ^</Text>
           <Text  style={estilos.resposta}>É possível, mas muito difícil. A tecnologia está presente em quase tudo: transporte, comunicação, saúde, agricultura... Viver sem ela exigiria um retorno a um estilo de vida bem mais simples e isolado, algo que poucas pessoas estão preparadas para fazer.</Text>
         </View>
+        <Text>Perguntas não Frequentes mas importantes</Text>
+        <View>
+                {faq.length > 0 ? (
+                  faq.map((faqs, index) => (
+                    <View key={index}>
+                      <Text>{faqs.pergunta}</Text>
+                      <Text>{faqs.resposta}</Text>
+                    </View>
+                   ))
+                ) : (
+              <   Text> Nenhuma Faq disponivel </Text>
+                )}
+          </View>
         <Text style={estilos.hr}>--------------------------------------------------------------------------------------</Text>
         <Text> </Text>
         <Text style={estilos.faca}>Faça sua pergunta:</Text>
