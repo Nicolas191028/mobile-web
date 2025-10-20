@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Text, ScrollView, View, StyleSheet } from 'react-native'
+import React, { useEffect, useState} from 'react'
+import { Text, ScrollView, View, StyleSheet} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import Card from '../Components/Card';
@@ -35,11 +35,14 @@ export default function ListaContatos() {
       />
 
       <Text style={estilos.titulo}>Lista Contatos</Text>
+      <Text>   </Text>
       {contatos.length > 0 ? (
         contatos.map((contato, index) => (
-          <View key={index}>
-            <Text>{contato.nome}</Text>
-            <Text>{contato.telefone}</Text>
+          <View style={estilos.containe} key={index}>
+            <Text style={estilos.nome}>{contato.nome}</Text>
+            <Text style={estilos.imagem}>{contato.imagem}</Text>            
+            <Text style={estilos.telefone}>{contato.telefone}</Text>
+            <Text>   </Text>
           </View>
         ))
         ) : (
@@ -58,10 +61,34 @@ const estilos = StyleSheet.create ({
     padding: 20,
     margin: 20
   },
+    containe: {
+    backgroundColor: "#ffd6d6ff",
+    borderRadius: 1.41,
+    shadowColor: 'red',
+    shadowOpacity: 20,
+    elevation: 10,
+    padding: 20,
+    margin: 20
+  },
   titulo: {
     textAlign: 'center',
     fontSize: 50,
     color: "red",
     backgroundColor: "#ffa6a6ff"
+  },
+  nome: {
+    textAlign: 'center',
+    fontSize: 30,
+    backgroundColor: "#ffd6d6ff",
+  },
+  telefone: {
+    textAlign: 'center',
+    fontSize: 25,
+    backgroundColor: "#ffd6d6ff",
+  },
+  imagem: {
+    textAlign: 'center',
+    fontSize: 100,
+    backgroundColor: "#ffd6d6ff",
   }
 })

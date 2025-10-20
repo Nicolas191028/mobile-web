@@ -58,13 +58,13 @@ export default function Faq() {
           <Text style={estilos.pergunta}>É possível viver sem tecnologia hoje em dia? ^</Text>
           <Text  style={estilos.resposta}>É possível, mas muito difícil. A tecnologia está presente em quase tudo: transporte, comunicação, saúde, agricultura... Viver sem ela exigiria um retorno a um estilo de vida bem mais simples e isolado, algo que poucas pessoas estão preparadas para fazer.</Text>
         </View>
-        <Text>Perguntas não Frequentes mas importantes</Text>
+        <Text style={estilos.nFreq}>Perguntas não Frequentes^ (mas importantes)</Text>
         <View>
                 {faq.length > 0 ? (
                   faq.map((faqs, index) => (
-                    <View key={index}>
-                      <Text>{faqs.pergunta}</Text>
-                      <Text>{faqs.resposta}</Text>
+                    <View style={estilos.containerr} key={index}>
+                      <Text style={estilos.perguntaNFreq}>{faqs.pergunta}</Text>
+                      <Text style={estilos.respostaNFreq}>{faqs.resposta}</Text>
                     </View>
                    ))
                 ) : (
@@ -152,5 +152,53 @@ const estilos = StyleSheet.create({
     },
     hr: {
       color: "#ff0000ff"
+    },
+    nFreq: {
+      textAlign: 'center',
+      color: "#00b7ffff",
+      fontSize: 25,
+      width: "100%",
+      height: 60,
+      textAlign: 'center',
+      backgroundColor: "#7ad9ffff",
+      shadowColor: 'black',
+      shadowOpacity: 0.2,
+      elevation: 2,
+    },
+    containerr: {
+      backgroundColor: "#fff897ff",
+      borderRadius: 1.41,
+      shadowColor: 'blue',
+      shadowOpacity: 0.2,
+      elevation: 2,
+      padding: 20,
+      margin: 20,
+      borderColor: "#ffee00ff",
+      borderWidth: 5,
+      borderRadius: 10
+    },
+    perguntaNFreq: {
+      width: "100%",
+      height: 45,
+      textAlign: 'center',
+      backgroundColor: "#8bff7bff",
+      shadowColor: 'black',
+      shadowOpacity: 0.2,
+      elevation: 2,
+      borderColor: "#15ff00ff",
+      borderWidth: 5,
+      borderRadius: 5
+    },
+    respostaNFreq: {
+      width: "100%",
+      height: 150,
+      textAlign: 'center',
+      backgroundColor: "#ffffffff",
+      shadowColor: 'black',
+      shadowOpacity: 0.2,
+      elevation: 2,
+      borderColor: "#c5c5c5ff",
+      borderWidth: 5,
+      borderRadius: 10      
     }
 });

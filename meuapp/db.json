@@ -3,24 +3,27 @@
         {
             "id": "1",
             "nome": "João Silva",
-            "telefone": "6767676767"
+            "telefone": "(11) 92470-5878",
+            "imagem": "🥸"
         },
         {
             "id": "2",
             "nome": "Popeto",
-            "telefone": "6666666666"
+            "telefone": "(11) 98936-9576",
+            "imagem": "🧑‍🦲"
         },
         {
             "id": "3",
             "nome": "Gabs",
-            "telefone": "7777777777"
+            "telefone": "(11) 97824-8637",
+            "imagem": "🧑‍🦰"
         }
     ],
     "faq":[
             {
                 "id": "1",
-                "pergunta": "O que é JSON Server",
-                "resposta": "JSON server é uma ferramenta que permite...."
+                "pergunta": "O que é JSON",
+                "resposta": "JSON é um formato de texto para intercâmbio de dados légivel por todos. Ele é independente de linguagem de programação e é comumente usado para transferir dados entre servidores e aplicações web devido à sua leveza e velocidade."
             },
             {
                 "id": "2",
