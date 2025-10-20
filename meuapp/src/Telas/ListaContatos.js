@@ -42,12 +42,13 @@ export default function ListaContatos() {
             <Text style={estilos.nome}>{contato.nome}</Text>
             <Text style={estilos.imagem}>{contato.imagem}</Text>            
             <Text style={estilos.telefone}>{contato.telefone}</Text>
-            <Text>   </Text>
-          </View>
+          </View> 
         ))
         ) : (
           <Text> Nenhum contato disponivel </Text>
         )}
+        <Text></Text>
+        <Text></Text>
     </ScrollView>
   )
 }
@@ -67,7 +68,7 @@ const estilos = StyleSheet.create ({
     shadowColor: 'red',
     shadowOpacity: 20,
     elevation: 10,
-    padding: 20,
+    padding: 50,
     margin: 20
   },
   titulo: {

@@ -22,13 +22,23 @@
     "faq":[
             {
                 "id": "1",
-                "pergunta": "O que é JSON",
+                "pergunta": "O que é JSON?",
                 "resposta": "JSON é um formato de texto para intercâmbio de dados légivel por todos. Ele é independente de linguagem de programação e é comumente usado para transferir dados entre servidores e aplicações web devido à sua leveza e velocidade."
             },
             {
                 "id": "2",
                 "pergunta": "Qual o nome de um organismo unicelular?",
                 "resposta": "A alga olho-de-marinheiro é a Valonia ventricosa, uma espécie de alga verde unicelular gigante encontrada em oceanos tropicais e subtropicais."
+            },
+            {
+                "id": "3",
+                "pergunta": "O que é axios?",
+                "resposta": "Axios é uma biblioteca JavaScript de requisições HTTP, funcionando tanto no navegador quanto em ambientes como o Node.js. Ele é baseado em promessas e oferece uma interface mais simples para interagir com APIs. "
+            },
+                        {
+                "id": "4",
+                "pergunta": "Lorem Ipsum?",
+                "resposta": "Dolor sit amet consectetur adipisicing elit. Tempora deleniti tenetur reiciendis. Ea, pariatur quam. Culpa, recusandae, corporis assumenda nisi dignissimos explicabo, maiores provident neque esse unde animi. Necessitatibus, odit."
             }
 ]
 }
