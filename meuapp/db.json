@@ -1,44 +1,50 @@
 {
-    "contatos": [
-        {
-            "id": "1",
-            "nome": "João Silva",
-            "telefone": "(11) 92470-5878",
-            "imagem": "🥸"
-        },
-        {
-            "id": "2",
-            "nome": "Popeto",
-            "telefone": "(11) 98936-9576",
-            "imagem": "🧑‍🦲"
-        },
-        {
-            "id": "3",
-            "nome": "Gabs",
-            "telefone": "(11) 97824-8637",
-            "imagem": "🧑‍🦰"
-        }
-    ],
-    "faq":[
-            {
-                "id": "1",
-                "pergunta": "O que é JSON?",
-                "resposta": "JSON é um formato de texto para intercâmbio de dados légivel por todos. Ele é independente de linguagem de programação e é comumente usado para transferir dados entre servidores e aplicações web devido à sua leveza e velocidade."
-            },
-            {
-                "id": "2",
-                "pergunta": "Qual o nome de um organismo unicelular?",
-                "resposta": "A alga olho-de-marinheiro é a Valonia ventricosa, uma espécie de alga verde unicelular gigante encontrada em oceanos tropicais e subtropicais."
-            },
-            {
-                "id": "3",
-                "pergunta": "O que é axios?",
-                "resposta": "Axios é uma biblioteca JavaScript de requisições HTTP, funcionando tanto no navegador quanto em ambientes como o Node.js. Ele é baseado em promessas e oferece uma interface mais simples para interagir com APIs. "
-            },
-                        {
-                "id": "4",
-                "pergunta": "Lorem Ipsum?",
-                "resposta": "Dolor sit amet consectetur adipisicing elit. Tempora deleniti tenetur reiciendis. Ea, pariatur quam. Culpa, recusandae, corporis assumenda nisi dignissimos explicabo, maiores provident neque esse unde animi. Necessitatibus, odit."
-            }
-]
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Jorge",
+      "telefone": "(11) 98378-4473",
+      "imagem": "🧔🏿"
+    },
+    {
+      "id": "2",
+      "nome": "Carlos",
+      "telefone": "(11) 98844-3773",
+      "imagem": "👨‍🦲"
+    },
+    {
+        "id": "3",
+        "nome": "Simão",
+        "telefone":"(11) 94473-8378",
+        "imagem": "👨🏻‍🦱"
+    },
+    {
+      "id": "4",
+      "nome": "Nicolas",
+      "telefone": "(11) 93474-3878",
+      "imagem": "🧑🏻‍🦱"
+    }
+  ],
+  "faq": [
+    {
+      "id": "1",
+      "pergunta": "O que é JSON?",
+      "resposta": "JSON é um formato de texto para intercâmbio de dados légivel por todos. Ele é independente de linguagem de programação e é comumente usado para transferir dados entre servidores e aplicações web devido à sua leveza e velocidade."
+    },
+    {
+      "id": "2",
+      "pergunta": "Qual o nome de um organismo unicelular?",
+      "resposta": "A alga olho-de-marinheiro é a Valonia ventricosa, uma espécie de alga verde unicelular gigante encontrada em oceanos tropicais e subtropicais."
+    },
+    {
+      "id": "3",
+      "pergunta": "O que é axios?",
+      "resposta": "Axios é uma biblioteca JavaScript de requisições HTTP, funcionando tanto no navegador quanto em ambientes como o Node.js. Ele é baseado em promessas e oferece uma interface mais simples para interagir com APIs. "
+    },
+    {
+      "id": "4",
+      "pergunta": "Lorem Ipsum?",
+      "resposta": "Dolor sit amet consectetur adipisicing elit. Tempora deleniti tenetur reiciendis. Ea, pariatur quam. Culpa, recusandae, corporis assumenda nisi dignissimos explicabo, maiores provident neque esse unde animi. Necessitatibus, odit."
+    }
+  ]
 }
