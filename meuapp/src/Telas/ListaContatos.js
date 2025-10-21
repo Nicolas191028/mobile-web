@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react'
-import { Text, ScrollView, View, StyleSheet} from 'react-native'
+import { Text, ScrollView, View, StyleSheet, Button, Alert} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import Card from '../Components/Card';
@@ -42,6 +42,10 @@ export default function ListaContatos() {
             <Text style={estilos.nome}>{contato.nome}</Text>
             <Text style={estilos.imagem}>{contato.imagem}</Text>            
             <Text style={estilos.telefone}>{contato.telefone}</Text>
+            <Button
+              title="Excluir"
+              onPress={() => Alert.alert('Aviso','Você clicou no botão')}
+            />
           </View> 
         ))
         ) : (

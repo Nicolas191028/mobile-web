@@ -53,7 +53,7 @@ const estilos = StyleSheet.create({
   },
   image: {
     margin: 10,
-    borderRadius: 120,
+    borderRadius: 12,
     borderColor: "orange",
     borderWidth: 5,
     margin: 60,
