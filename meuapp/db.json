@@ -13,16 +13,22 @@
       "imagem": "👨‍🦲"
     },
     {
-        "id": "3",
-        "nome": "Simão",
-        "telefone":"(11) 94473-8378",
-        "imagem": "👨🏻‍🦱"
+      "id": "3",
+      "nome": "Simão",
+      "telefone": "(11) 94473-8378",
+      "imagem": "👨🏻‍🦱"
     },
     {
       "id": "4",
       "nome": "Nicolas",
       "telefone": "(11) 93474-3878",
       "imagem": "🧑🏻‍🦱"
+    },
+    {
+      "id": "dd31",
+      "nome": "Adalberto",
+      "telefone": "(11) 98754-6938",
+      "imagem": "🧓"
     }
   ],
   "faq": [
