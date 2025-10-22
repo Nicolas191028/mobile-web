@@ -26,6 +26,12 @@ export default function Home() {
           textButton="Ir para Lista"
           onPress={ () => navigation.navigate("ListaContatos") }
         />
+        <Card
+          title="Cadastro"
+          content="Cadastros"
+          textButton="Ir para Cadastro"
+          onPress={ () => navigation.navigate("Cadastro") }
+        />
     </View>
   )
 }
