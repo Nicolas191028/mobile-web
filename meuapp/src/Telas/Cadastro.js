@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Button, ScrollView, Text, TextInput, View, StyleSheet, Alert } from 'react-native'
+import { Button, ScrollView, Text, TextInput, View, StyleSheet, Alert, TouchableOpacity } from 'react-native'
 import axios from "axios"
 import Card from '../Components/Card'
 
@@ -67,7 +67,11 @@ export default function Cadastro() {
                 placeholder='Coloque uma imagem'
             />
 
-            <Button title="Cadastrar" onPress={enviarContato}/>
+            {/* <Button title="Cadastrar" onPress={enviarContato}/> */}
+
+            <TouchableOpacity onPress={enviarContato} style={estilos.button}>
+                <Text style={estilos.titleButton}>Clique aqui</Text>
+            </TouchableOpacity>
         </View>
     </ScrollView>
   )
@@ -104,7 +108,7 @@ const estilos = StyleSheet.create({
     label: {
         fontSize: 18,
         marginBottom: 5,
-        color: "orange"
+        color: "#e6cf00ff"
     },
     input: {
         borderWidth: 1,
@@ -113,5 +117,16 @@ const estilos = StyleSheet.create({
         marginBottom: 20,
         borderRadius: 5,
         backgroundColor: "#fff"
+    },
+    button: {
+        backgroundColor: "#ff9100ff",
+        padding: 12,
+        borderRadius: 8,
+        alignItems: 'center'
+    },
+    titleButton: {
+        color: '#000000ff',
+        fontSize: 16,
+        fontWeight: 'bold'
     }
 })

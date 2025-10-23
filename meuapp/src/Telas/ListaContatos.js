@@ -1,8 +1,9 @@
 import React, { useEffect, useState} from 'react'
-import { Text, ScrollView, View, StyleSheet, Button, Alert} from 'react-native'
+import { Text, ScrollView, View, StyleSheet, Button, Alert, TouchableOpacity} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import Card from '../Components/Card';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function ListaContatos() {
   const [contatos, setContatos] = useState([]);
@@ -57,10 +58,16 @@ export default function ListaContatos() {
             <Text style={estilos.nome}>{contato.nome}</Text>
             <Text style={estilos.imagem}>{contato.imagem}</Text>            
             <Text style={estilos.telefone}>{contato.telefone}</Text>
-            <Button
+
+            {/* <Button
               title="Excluir"
               onPress={() => deleteContato(contato.id)}
-            />
+              /> */}
+
+            <TouchableOpacity onPress={() => deleteContato(contato.id)} style={estilos.button}>
+              <Text style={estilos.titleButton}>Excluir<Icon name="trash" size={20} color="#000" /></Text>
+            </TouchableOpacity>
+
           </View> 
         ))
         ) : (
@@ -110,5 +117,15 @@ const estilos = StyleSheet.create ({
     textAlign: 'center',
     fontSize: 100,
     backgroundColor: "#ffd6d6ff",
-  }
+  },
+    button: {
+        backgroundColor: "#ff0000ff",
+        padding: 12,
+        alignItems: 'center'
+    },
+    titleButton: {
+        color: '#000000ff',
+        fontSize: 16,
+        fontWeight: 'bold'
+    }
 })
