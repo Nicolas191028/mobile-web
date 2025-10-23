@@ -65,7 +65,10 @@ export default function ListaContatos() {
               /> */}
 
             <TouchableOpacity onPress={() => deleteContato(contato.id)} style={estilos.button}>
-              <Text style={estilos.titleButton}>Excluir<Icon name="trash" size={20} color="#000" /></Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Icon name="trash" size={20} color="#000" style={{ marginRight: 8 }} />
+                <Text style={estilos.titleButton}>Excluir</Text>
+              </View>
             </TouchableOpacity>
 
           </View> 
