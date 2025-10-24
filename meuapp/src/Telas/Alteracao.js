@@ -12,7 +12,7 @@ export default function Cadastro() {
     const [telefone, setTelefone] = useState('');
     const [imagem, setImagem] = useState('');
 
-    const enviarContato = async () => {
+    const editarContato = async () => {
         if (!nome || !telefone || !imagem) {
             Alert.alert("Erro, por favor, preencha todos os campos");
             return;
@@ -20,7 +20,8 @@ export default function Cadastro() {
 
         const novoContato = {nome, telefone, imagem};
 
-        axios.post(`http://10.0.2.2:3000/contatos`, novoContato)
+        axios
+            .post(`http://10.0.2.2:3000/contatos`, novoContato)
             .then((resposta) => {
                 if (resposta.status === 201) {
                     setNome('');
@@ -28,7 +29,7 @@ export default function Cadastro() {
                     setImagem('');
                     navigation.navigate("ListaContatos")
                 } else {
-                    Alert.alert("Erro, falha ao adicionar contato")
+                    Alert.alert("Erro, falha ao editar contato")
                 }
             })
     }
@@ -36,23 +37,17 @@ export default function Cadastro() {
 
   return (
     <ScrollView style={estilos.container}>
-        <Card
-                  title="Home"
-                  content="Retornar para Home."
-                  textButton="Ir para Home"
-                  onPress={ () => navigation.navigate("Home") }
-        />
 
         <View style={estilos.containerInt}>
             <View style={estilos.cad}>
-                <Text style={estilos.cadastro}>Cadastro<Icon name="app-registration" size={20} color="#ff0000ff" style={{ fontSize: 30 }}/></Text>         
+                <Text style={estilos.cadastro}>Editar Perfil<Icon name="app-registration" size={20} color="#ff0000ff" style={{ fontSize: 30 }}/></Text>         
             </View>
             <Text style={estilos.label}>Nome:</Text>
             <TextInput 
                 style={estilos.input}
                 value={nome}
                 onChangeText={setNome}
-                placeholder='Digite o Nome'
+                placeholder='Edite o Nome'
             />
 
             <Text style={estilos.label}>Telefone:</Text>
@@ -61,19 +56,19 @@ export default function Cadastro() {
                 style={estilos.input}
                 value={telefone}
                 onChangeText={setTelefone}
-                placeholder='Digite o telefone'
+                placeholder='Edite o telefone'
             />
             <Text style={estilos.label}>Imagem:</Text>
             <TextInput 
                 style={estilos.input}
                 value={imagem}
                 onChangeText={setImagem}
-                placeholder='Coloque uma imagem'
+                placeholder='Coloque uma nova imagem'
             />
 
             {/* <Button title="Cadastrar" onPress={enviarContato}/> */}
 
-            <TouchableOpacity onPress={enviarContato} style={estilos.button}>
+            <TouchableOpacity onPress={editarContato} style={estilos.button}>
                 <Text style={estilos.titleButton}>Clique aqui</Text>
             </TouchableOpacity>
         </View>

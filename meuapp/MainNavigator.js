@@ -6,6 +6,8 @@ import Sobre from './src/Telas/Sobre';
 import Faq from './src/Telas/Faq';
 import ListaContatos from './src/Telas/ListaContatos';
 import Cadastro from './src/Telas/Cadastro';
+import Alteracao from './src/Telas/Alteracao';
+import Perfil from './src/Telas/Perfil';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +20,8 @@ export default function MainNavigator() {
             <Stack.Screen name="Faq" component={Faq} options={{ headerShown: false }} />
             <Stack.Screen name="ListaContatos" component={ListaContatos} options={{ headerShown: false }} />
             <Stack.Screen name="Cadastro" component={Cadastro} options={{ headerShown: false }} />
+            <Stack.Screen name="Alteracao" component={Alteracao}/>
+            <Stack.Screen name="Perfil" component={Perfil}/>
         </Stack.Navigator>
     </NavigationContainer>
   )

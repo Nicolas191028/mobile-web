@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Header() {
   return (
     <View style={estilos.topo}>
-        <Text style={estilos.tituloHeader}>Fut Popeto</Text>
+        <Text style={estilos.tituloHeader}>Fut Popeto <Icon name="futbol-o" size={20} color="#ff0000ff" style={{ marginRight: 8 }} /></Text>
     </View>
   )
 }

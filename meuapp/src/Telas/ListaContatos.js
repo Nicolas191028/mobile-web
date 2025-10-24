@@ -63,14 +63,26 @@ export default function ListaContatos() {
               title="Excluir"
               onPress={() => deleteContato(contato.id)}
               /> */}
-
-            <TouchableOpacity onPress={() => deleteContato(contato.id)} style={estilos.button}>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="trash" size={20} color="#000" style={{ marginRight: 8 }} />
-                <Text style={estilos.titleButton}>Excluir</Text>
-              </View>
-            </TouchableOpacity>
-
+            <View style={estilos.buttons}>
+              <TouchableOpacity onPress={() => deleteContato(contato.id)} style={estilos.buttonExc}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Text style={estilos.titleButton}>Excluir</Text>
+                  <Icon name="trash" size={20} color="#000" style={{ marginRight: 8 }} />
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate("Alteracao")} style={estilos.buttonAlt} >
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Text style={estilos.titleButton}>Alterar</Text>
+                  <Icon name="edit" size={20} color="#000" style={{ marginRight: 8 }} />
+                </View>
+              </TouchableOpacity>
+            </View>
+              <TouchableOpacity onPress={() => navigation.navigate("Perfil")} style={estilos.buttonPer} >
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Text style={estilos.titleButton}>Perfil</Text>
+                  <Icon name="user-o" size={20} color="#000" style={{ marginRight: 8 }} />
+                </View>
+               </TouchableOpacity>
           </View> 
         ))
         ) : (
@@ -121,8 +133,13 @@ const estilos = StyleSheet.create ({
     fontSize: 100,
     backgroundColor: "#ffd6d6ff",
   },
-    button: {
+    buttonExc: {
         backgroundColor: "#ff0000ff",
+        padding: 12,
+        alignItems: 'center'
+    },
+    buttonAlt: {
+        backgroundColor: "#3cff00ff",
         padding: 12,
         alignItems: 'center'
     },
@@ -130,5 +147,13 @@ const estilos = StyleSheet.create ({
         color: '#000000ff',
         fontSize: 16,
         fontWeight: 'bold'
+    },
+    buttons: {
+      flexDirection: 'row'
+    },
+    buttonPer: {
+        backgroundColor: "#001affff",
+        padding: 12,
+        alignItems: 'center'
     }
 })
